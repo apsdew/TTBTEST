@@ -1,9 +1,10 @@
-package com.assignment.crm_service;
+package com.assignment.crmservice;
 
+import com.assignment.crmservice.CrmServiceApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+@SpringBootTest(classes = CrmServiceApplication.class)
 class CrmServiceApplicationTests {
 
 	@Test
