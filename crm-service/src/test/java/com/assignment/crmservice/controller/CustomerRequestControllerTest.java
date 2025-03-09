@@ -90,7 +90,7 @@ public class CustomerRequestControllerTest {
     void testUpdateRequestStatus_Success() throws Exception {
         when(customerRequestService.updateRequestStatus(1L, RequestStatus.COMPLETED)).thenReturn(customerRequest);
 
-        mockMvc.perform(put("/api/customers/request/1/status")
+        mockMvc.perform(put("/api/customers/request/1/updateStatus")
                         .param("status", "COMPLETED")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());

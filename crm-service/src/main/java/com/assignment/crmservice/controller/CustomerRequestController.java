@@ -32,7 +32,7 @@ public class CustomerRequestController {
         return customerRequestService.getRequestById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
 
-    @PutMapping("/request/{id}/status")
+    @PutMapping("/request/{id}/updateStatus")
     public ResponseEntity<CustomerRequest> updateRequestStatus(@PathVariable Long id, @RequestParam RequestStatus status) {
         return ResponseEntity.ok(customerRequestService.updateRequestStatus(id, status));
     }
