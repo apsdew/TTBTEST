@@ -33,7 +33,6 @@ public class CustomerRequestRepositoryTest {
         request.setStatus(RequestStatus.IN_PROGRESS);
 
         CustomerRequest savedRequest = testEntityManager.persistFlushFind(request);
-
         Optional<CustomerRequest> foundRequest = customerRequestRepository.findById(savedRequest.getId());
 
         assertThat(foundRequest).isPresent();
